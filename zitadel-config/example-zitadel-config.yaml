@@ -1,0 +1,70 @@
+Log:
+  Level: info # ZITADEL_LOG_LEVEL
+  Formatter:
+    Format: text # ZITADEL_LOG_FORMATTER_FORMAT
+
+# Port ZITADEL will listen on
+Port: 8080 # ZITADEL_PORT
+# ExternalPort is the port on which end users access ZITADEL.
+# It can differ from Port e.g. if a reverse proxy forwards the traffic to ZITADEL
+# Read more about external access: https://zitadel.com/docs/self-hosting/manage/custom-domain
+ExternalPort: 8080 # ZITADEL_EXTERNALPORT
+# ExternalPort is the domain on which end users access ZITADEL.
+# Read more about external access: https://zitadel.com/docs/self-hosting/manage/custom-domain
+ExternalDomain: localhost # ZITADEL_EXTERNALDOMAIN
+# ExternalSecure specifies if ZITADEL is exposed externally using HTTPS or HTTP.
+# Read more about external access: https://zitadel.com/docs/self-hosting/manage/custom-domain
+ExternalSecure: false # ZITADEL_EXTERNALSECURE
+
+TLS:
+  # If enabled, ZITADEL will serve all traffic over TLS (HTTPS and gRPC)
+  # you must then also provide a private key and certificate to be used for the connection
+  # either directly or by a path to the corresponding file
+  Enabled: false # ZITADEL_TLS_ENABLED
+  # Path to the private key of the TLS certificate, will be loaded into the key
+  # and overwrite any existing value
+  # E.g. /path/to/key/file.pem
+  KeyPath: # ZITADEL_TLS_KEYPATH
+  # Private key of the TLS certificate (KeyPath has a higher priority than Key)
+  # base64 encoded content of a pem file
+  Key: # ZITADEL_TLS_KEY
+  # Path to the certificate for the TLS connection, will be loaded into the Cert
+  # and overwrite any existing value
+  # E.g. /path/to/cert/file.pem
+  CertPath: # ZITADEL_TLS_CERTPATH
+  # Certificate for the TLS connection (CertPath will this overwrite if specified)
+  # base64 encoded content of a pem file
+  Cert: # ZITADEL_TLS_CERT
+
+# Header name of HTTP2 (incl. gRPC) calls from which the instance will be matched
+HTTP2HostHeader: ":authority" # ZITADEL_HTTP2HOSTHEADER
+# Header name of HTTP1 calls from which the instance will be matched
+HTTP1HostHeader: "host" # ZITADEL_HTTP1HOSTHEADER
+
+WebAuthNName: ZITADEL # ZITADEL_WEBAUTHNNAME
+
+Database:
+  postgres:
+    Host: localhost
+    Port: 5432
+    Database: zitadel
+    MaxOpenConns: 25
+    MaxConnLifetime: 1h
+    MaxConnIdleTime: 5m
+    Options:
+    User:
+      Username: postgres
+      Password: postgres
+      SSL:
+        Mode: disable
+        RootCert:
+        Cert:
+        Key:
+    Admin:
+      Username: postgres
+      Password: postgres
+      SSL:
+        Mode: disable
+        RootCert:
+        Cert:
+        Key:
