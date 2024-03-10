@@ -105,4 +105,14 @@ grpcui -vv -plaintext -H 'authorization: Bearer XXX_TOKEN_FROM_ZITADEL_HERE' -pr
 Replace "localhost:8080" with Zitadel address. Use "example.com:443" for https cloud base version
 
 
+# Headhunt me
+
+Interested to discuss the above or looking for a partner to work on AI Agents, Data Mining, CRM, B2B Lead Generation and/or Outbound Marketing SaaS system related projects? Feel free to ping me to exchange ideas or request a consultation!
+
++81 80 4756 2323 (WhatsApp, preferred)
+[api.whatsapp.com/send?phone=818047562323](https://api.whatsapp.com/send?phone=818047562323)
+
+[1@ilya1.com](mailto:1@ilya1.com)
+[t.me/reactima](https://t.me/reactima)
+[linkedin.com/in/reactima](https://www.linkedin.com/in/reactima/)
 
